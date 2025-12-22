@@ -8,7 +8,7 @@ import Trending from "./Trending";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setMovies } from "../features/movie/movieSlice";
-import db from "./firebase";
+import db from "./Firebase";
 import { selectUserName } from "../features/user/userSlice";
 
 const Home = (props) => {

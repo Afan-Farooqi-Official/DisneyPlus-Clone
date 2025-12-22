@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import {useParams} from 'react-router-dom';
-import db from './firebase';
+import db from './Firebase';
 
 const Detail = () => {
 

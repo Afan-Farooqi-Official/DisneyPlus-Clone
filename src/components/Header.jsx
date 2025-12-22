@@ -8,7 +8,7 @@ import {
     selectUserPhoto, 
     setSignOutState
 } from "../features/user/userSlice";
-import { auth, provider } from "./firebase";
+import { auth, provider } from "./Firebase";
 
 const Header = (props) => {
 
