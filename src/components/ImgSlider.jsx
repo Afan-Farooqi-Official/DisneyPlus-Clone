@@ -11,6 +11,24 @@ const ImgSlider = (props) => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false // hide arrows on mobile
+            }
+          }
+        ]
+
     };
 
     return (
@@ -90,7 +108,7 @@ const Wrap = styled.div`
 
         img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
         }
 
