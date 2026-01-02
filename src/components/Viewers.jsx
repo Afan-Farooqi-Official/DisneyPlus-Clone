@@ -57,8 +57,6 @@ const Container = styled.div`
 
     @media (max-width: 768px) {
         grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: 15px;
-        padding: 10px;
     }
 `
 
@@ -76,7 +74,7 @@ const Wrap = styled.div`
     img {
         inset: 0px;
         display: block;
-        height: auto;
+        height: 100%;
         object-fit: cover;
         opacity: 1;
         position: absolute;
@@ -106,11 +104,6 @@ const Wrap = styled.div`
     &:hover video {
         opacity: 1;
         z-index: 1;
-    }
-
-    @media (max-width: 768px) {
-      padding-top: 40%;
-      border-radius: 6px;
     }
 `
 
