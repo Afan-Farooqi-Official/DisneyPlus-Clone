@@ -25,21 +25,21 @@ const Header = (props) => {
                 history('/home');
             }
         })
-    }, [userName]);
+    }, []);
 
     const handleAuth = () => {
         if (!userName) {
             auth.signInWithPopup(provider).then((result) => {
                 setUser(result.user);
                 }).catch((error)  => {
-                toast.error(error.message)
+                console.error(error.message)
             })
         } else if (userName) {
             auth.signOut().then(() => {
                 dispatch(setSignOutState(
                 ));
                 history('/');
-            }).catch((error) => toast.error(error.message));
+            }).catch((error) => console.error(error.message));
         }
     }
 
@@ -47,7 +47,7 @@ const Header = (props) => {
         dispatch(setUserLoginDetails({
             name: user.displayName,
             email: user.email,
-            photo: user.photo,
+            photo: user.photoURL,
         }));
     }
 
@@ -222,7 +222,7 @@ const SignOut = styled.div`
     cursor: pointer;
     margin-left: auto;
 
-    &{UserImg} {
+    ${UserImg} {
         border-radius: 50%;
         width: 100%;
         height: 100%;
